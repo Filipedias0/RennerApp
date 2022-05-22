@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">RennerApp</string>
+    <string name="textViewClothesM">"Jaqueta azul reta "</string>
+    <string name="textViewHomeTitle">Ofertas no app</string>
+    <string name="textViewClothesMText">Blusão</string>
+    <string name="textViewClothesMPriceText">R$ 159,90</string>
+    <string name="textViewClothesMDescText">Em Moletom com Capuz e Bolso Canguru</string>
+    <string name="textViewClothesWText">Blusa em Viscose</string>
+    <string name="textViewClothesWPriceText">R$ 99,90</string>
+    <string name="textViewClothesWDescText">Em viscose com manga longa comfy preto</string>
 </resources>

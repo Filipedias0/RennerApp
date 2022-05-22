@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/layout/activity_main.xml" value="0.371875" />
+        <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/drawable/ic_renner_logo.xml" value="0.1995" />
+        <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/drawable/renner_logo_alt.xml" value="0.1995" />
+        <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>

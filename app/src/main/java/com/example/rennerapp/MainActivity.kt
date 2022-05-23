@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                         "detailsText",
                         "${textViewClothesM.text} ${textViewClothesMDesc.text}"
                     )
-
+                productDetails.putExtra("price", textViewClothesMPrice.text)
                 startActivity(productDetails)
             }
         })
@@ -88,6 +88,12 @@ class MainActivity : AppCompatActivity() {
                 val productDetails = Intent( context , DetailsActivity::class.java)
                 productDetails.putExtra("imageNumberW", position)
                 productDetails.putExtra("boolW", true)
+                productDetails.putExtra("price", textViewClothesWPrice.text)
+                productDetails.putExtra(
+                    "detailsText",
+                    "${textViewClothesM.text} ${textViewClothesMDesc.text}"
+                )
+                productDetails.putExtra("price", textViewClothesWPrice.text)
                 startActivity(productDetails)
             }
         })
@@ -104,8 +110,8 @@ class MainActivity : AppCompatActivity() {
 
                     1 -> {
                         textViewClothesW.text = "Blusa manga longa"
-                        textViewClothesMDesc.text = "Em Tricô com pontos diferenciados verde"
-                        textViewClothesMPrice.text = "R$ 199,90"
+                        textViewClothesWDesc.text = "Em Tricô com pontos diferenciados verde"
+                        textViewClothesWPrice.text = "R$ 199,90"
                     }
 
                     2 -> {

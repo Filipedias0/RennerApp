@@ -45,6 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="450dp"
         app:iss_placeholder="@color/white"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
@@ -68,9 +69,10 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="-8dp"
         android:height="80dp"
-        android:backgroundTint="@color/limeGreen"
-        android:text="Button"
+        android:backgroundTint="#C40233"
+        android:text="Adicionar à sacola"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,7 +132,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/colorBox" />
+            app:layout_constraintTop_toBottomOf="@+id/colorBoxStroke" />
 
         <TextView
             android:id="@+id/textViewSizeTitle"
@@ -168,7 +170,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/colorBox"
+            android:id="@+id/colorBoxStroke"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="2dp"
@@ -180,11 +182,32 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewSizeTitle">
 
             <LinearLayout
-
+                android:id="@+id/colorBox"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@drawable/inner_square"
-                android:backgroundTint="@color/limeGreen" />
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/colorBoxStrokeAlt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/color_square_shape"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            app:layout_constraintStart_toEndOf="@+id/colorBoxStroke"
+            app:layout_constraintTop_toTopOf="@+id/colorBoxStroke">
+
+            <LinearLayout
+                android:id="@+id/colorBoxAlt"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/inner_square"
+                android:backgroundTint="#21283E"
+                android:orientation="horizontal" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

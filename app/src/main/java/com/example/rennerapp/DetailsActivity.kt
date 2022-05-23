@@ -1,10 +1,17 @@
 package com.example.rennerapp
 
+import android.graphics.Color
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.interfaces.ItemChangeListener
 import com.denzcoskun.imageslider.models.SlideModel
 
 class DetailsActivity : AppCompatActivity() {
@@ -17,17 +24,49 @@ class DetailsActivity : AppCompatActivity() {
         val detailsImageNumberW = data?.getInt("imageNumberW")
         val detailsText = data?.getString("detailsText")
         val boolW = data?.getBoolean("boolW")
+        val price = data?.getString("price")
+        var imageListDetails = ArrayList<SlideModel>()
+        val detailsImageSlider = findViewById<ImageSlider>(R.id.details_image_slider)
 
-        val imageListDetails = ArrayList<SlideModel>()
+        val textViewDetails = findViewById<TextView>(R.id.textViewDetailsTitle)
+        val textViewPrice = findViewById<TextView>(R.id.textViewOldPrice)
+        val colorBox = findViewById<LinearLayout>(R.id.colorBox)
+        val colorBoxView = findViewById<LinearLayout>(R.id.colorBoxStroke)
+        val colorBoxViewAlt = findViewById<LinearLayout>(R.id.colorBoxStrokeAlt)
+        val backButton = findViewById<ImageView>(R.id.goBack)
 
+        textViewPrice.text = price
+        textViewDetails.text = detailsText
 
+        backButton.setOnClickListener {
+            finish()
+        }
+
+        if(detailsText != "Blusão Em Moletom com Capuz e Bolso Canguru" && boolW == false) {
+            colorBoxViewAlt.visibility = View.GONE
+        }
+
+        colorBoxViewAlt.setOnClickListener {
+                val newImageList = ArrayList<SlideModel>()
+
+                newImageList.add(SlideModel(R.drawable.m_clothes_alt_1_1, ScaleTypes.FIT))
+                newImageList.add(SlideModel(R.drawable.m_clothes_alt_1_2, ScaleTypes.FIT))
+                detailsImageSlider.setImageList(newImageList, ScaleTypes.FIT)
+        }
+
+        colorBoxView.setOnClickListener {
+                    val newImageList = ArrayList<SlideModel>()
+                    newImageList.add(SlideModel(R.drawable.m_clothes_1_1, ScaleTypes.FIT))
+                    newImageList.add(SlideModel(R.drawable.m_clothes_1_2, ScaleTypes.FIT))
+
+                    detailsImageSlider.setImageList(newImageList, ScaleTypes.FIT)
+        }
         if(boolW == false){
             when (detailsImageNumberM) {
                 0 -> {
                     imageListDetails.add(SlideModel(R.drawable.m_clothes_1_1, ScaleTypes.FIT))
                     imageListDetails.add(SlideModel(R.drawable.m_clothes_1_2, ScaleTypes.FIT))
-                    val textViewDetails = findViewById<TextView>(R.id.textViewDetailsTitle)
-                    textViewDetails.text = detailsText
+                    colorBox.setBackgroundColor(Color.parseColor("#4495d4"))
 
                     //imageListMDetails.add(SlideModel(R.drawable.m_clothes_alt_1_1, ScaleTypes.FIT))
                     //imageListMDetails.add(SlideModel(R.drawable.m_clothes_alt_1_2, ScaleTypes.FIT))
@@ -36,11 +75,13 @@ class DetailsActivity : AppCompatActivity() {
                 1 -> {
                     imageListDetails.add(SlideModel(R.drawable.m_clothes_2_1, ScaleTypes.FIT))
                     imageListDetails.add(SlideModel(R.drawable.m_clothes_2_2, ScaleTypes.FIT))
+                    colorBox.setBackgroundColor(Color.parseColor("#eedad3"))
                 }
 
                 2 -> {
                     imageListDetails.add(SlideModel(R.drawable.m_clothes_3_1, ScaleTypes.FIT))
                     imageListDetails.add(SlideModel(R.drawable.m_clothes_3_2, ScaleTypes.FIT))
+                    colorBox.setBackgroundColor(Color.parseColor("#e5e2da"))
                 }
             }
         }
@@ -50,6 +91,8 @@ class DetailsActivity : AppCompatActivity() {
                 0 -> {
                     imageListDetails.add(SlideModel(R.drawable.w_clothes_1_1, ScaleTypes.FIT))
                     imageListDetails.add(SlideModel(R.drawable.w_clothes_1_2, ScaleTypes.FIT))
+                    colorBox.setBackgroundColor(Color.parseColor("#181312"))
+
                     //imageListMDetails.add(SlideModel(R.drawable.m_clothes_alt_1_1, ScaleTypes.FIT))
                     //imageListMDetails.add(SlideModel(R.drawable.m_clothes_alt_1_2, ScaleTypes.FIT))
                 }
@@ -57,17 +100,26 @@ class DetailsActivity : AppCompatActivity() {
                 1 -> {
                     imageListDetails.add(SlideModel(R.drawable.w_clothes_2_1, ScaleTypes.FIT))
                     imageListDetails.add(SlideModel(R.drawable.w_clothes_2_2, ScaleTypes.FIT))
+                    colorBox.setBackgroundColor(Color.parseColor("#d0dedc"))
+
                 }
 
                 2 -> {
                     imageListDetails.add(SlideModel(R.drawable.w_clothes_3_1, ScaleTypes.FIT))
                     imageListDetails.add(SlideModel(R.drawable.w_clothes_3_2, ScaleTypes.FIT))
+                    colorBox.setBackgroundColor(Color.parseColor("#e9e2d9"))
+
                 }
             }
         }
 
 
-        val detailsImageSlider = findViewById<ImageSlider>(R.id.details_image_slider)
+        detailsImageSlider.setItemChangeListener(object : ItemChangeListener {
+            override fun onItemChanged(position: Int) {
+                val textViewCarouselIndex = findViewById<TextView>(R.id.textViewCarouselIndex)
+                textViewCarouselIndex.text = "${ position + 1 }/${ imageListDetails.size }"
+            }
+        })
 
         detailsImageSlider.setImageList(imageListDetails)
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -15,11 +16,9 @@
         android:layout_height="40dp"
         android:src="@drawable/renner_logo_alt" />
 
-    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:layout_height="match_parent">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -76,13 +75,25 @@
             <TextView
                 android:id="@+id/textViewClothesMPrice"
                 android:layout_width="wrap_content"
-                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:text="@string/textViewClothesMPriceText"
+                android:textColor="@color/limeGreen"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textViewClothesM" />
+
+            <TextView
+                android:id="@+id/textViewOldPriceM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="R$ 190,90"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/textViewClothesMPrice"
+                app:layout_constraintTop_toTopOf="@+id/textViewClothesMPrice" />
 
             <TextView
                 android:id="@+id/textViewClothesMDesc"
@@ -138,10 +149,22 @@
             <TextView
                 android:id="@+id/textViewClothesWPrice"
                 android:layout_width="wrap_content"
-                android:textColor="@color/black"
                 android:layout_height="wrap_content"
                 android:text="@string/textViewClothesWPriceText"
+                android:textColor="@color/limeGreen"
                 android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewClothesW" />
+
+            <TextView
+                android:id="@+id/textViewClothesWOldPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="80dp"
+                android:text="@string/textViewClothesWPriceText"
+                android:textColor="@color/black"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textViewClothesW" />

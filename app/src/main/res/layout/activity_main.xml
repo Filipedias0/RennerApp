@@ -56,8 +56,9 @@
                 app:iss_placeholder="@color/white"
                 app:layout_constraintCircleRadius="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewHomeTitle" >
+                app:layout_constraintTop_toBottomOf="@+id/textViewHomeTitle">
 
 
                 <ImageView
@@ -87,9 +88,10 @@
                     android:paddingVertical="2dp">
 
                     <TextView
+                        android:id="@+id/textViewDiscountM"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15%"
+                        android:text="30%"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
@@ -166,6 +168,39 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textViewClothesMDesc"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutPromotion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bottom_border_radius"
+                    android:backgroundTint="@color/limeGreen"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp">
+
+                    <TextView
+                        android:id="@+id/textViewDiscountW"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30%"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:text="OFF"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
             </com.denzcoskun.imageslider.ImageSlider>
 

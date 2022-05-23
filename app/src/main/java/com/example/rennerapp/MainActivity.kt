@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         val textViewClothesMDesc = findViewById<TextView>(R.id.textViewClothesMDesc)
         val textViewClothesMPrice = findViewById<TextView>(R.id.textViewClothesMPrice)
         val textViewClothesMOldPrice = findViewById<TextView>(R.id.textViewOldPriceM)
+        val textViewDiscountM = findViewById<TextView>(R.id.textViewDiscountM)
+        val textViewDiscountW = findViewById<TextView>(R.id.textViewDiscountW)
 
         imageSliderM.setImageList(imageListM)
 
@@ -40,6 +42,7 @@ class MainActivity : AppCompatActivity() {
                     )
                 productDetails.putExtra("oldPrice", textViewClothesMOldPrice.text)
                 productDetails.putExtra("price", textViewClothesMPrice.text)
+                productDetails.putExtra("discount", textViewDiscountM.text)
                 startActivity(productDetails)
             }
         })
@@ -51,21 +54,28 @@ class MainActivity : AppCompatActivity() {
                         0 -> {
                             textViewClothesM.text = "Blusão"
                             textViewClothesMDesc.text = "Em Moletom com Capuz e Bolso Canguru"
-                            textViewClothesMPrice.text = "R$ 159,90"
+                            textViewClothesMPrice.text = "R$ 133,63"
+                            textViewClothesMOldPrice.text = "R$190,90"
+                            textViewDiscountM.text = "30%"
                         }
 
                         1 -> {
                             textViewClothesM.text = "Moletom"
                             textViewClothesMDesc.text =
                                 "Com capuz ajustável e estampa lettering Califórnia rosa"
-                            textViewClothesMPrice.text = "R$ 169,90"
+                            textViewClothesMPrice.text = "R$ 135,98"
+                            textViewClothesMOldPrice.text = "R$190,90"
+                            textViewDiscountM.text = "20%"
+
                         }
 
                         2 -> {
                             textViewClothesM.text = "Blusão"
                             textViewClothesMDesc.text =
                                 "Com gola com capuz e manga longa com ribana"
-                            textViewClothesMPrice.text = "R$ 149,90"
+                            textViewClothesMPrice.text = "R$ 120,90"
+                            textViewClothesMOldPrice.text = "R$200,90"
+                            textViewDiscountM.text = "40%"
                         }
                     }
                 }
@@ -97,6 +107,7 @@ class MainActivity : AppCompatActivity() {
                 )
                 productDetails.putExtra("oldPrice", textViewClothesWOldPrice.text)
                 productDetails.putExtra("price", textViewClothesWPrice.text)
+                productDetails.putExtra("discount", textViewDiscountW.text)
                 startActivity(productDetails)
             }
         })
@@ -109,22 +120,26 @@ class MainActivity : AppCompatActivity() {
                         textViewClothesW.text = "Blusa em Viscose"
                         textViewClothesWDesc.text = "Com manga longa comfy preto"
 
-                        textViewClothesWPrice.text = "R$ 99,90"
+                        textViewClothesWPrice.text = "R$ 84,63"
                         textViewClothesWOldPrice.text = "R$120,90"
+                        textViewDiscountW.text = "30%"
                     }
 
                     1 -> {
                         textViewClothesW.text = "Blusa manga longa"
                         textViewClothesWDesc.text = "Em Tricô com pontos diferenciados verde"
-                        textViewClothesWPrice.text = "R$ 199,90"
+                        textViewClothesWPrice.text = "R$ 132,54"
                         textViewClothesWOldPrice.text = "R$220,90"
+                        textViewDiscountW.text = "40%"
+
                     }
 
                     2 -> {
                         textViewClothesW.text = "Blusa alongada em tricô"
                         textViewClothesWDesc.text = "Com golinha alta e fenda bege"
-                        textViewClothesWPrice.text = "R$ 99,90"
+                        textViewClothesWPrice.text = "R$ 60,45"
                         textViewClothesWOldPrice.text = "R$120,90"
+                        textViewDiscountW.text = "50%"
                     }
                 }
             }

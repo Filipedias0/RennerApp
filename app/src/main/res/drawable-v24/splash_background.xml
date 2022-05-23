@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:drawable="@color/white"/>
-    <item>
+        android:drawable="@color/white"
+        />
+    <item
+        android:width="200dp"
+        android:height="200dp"
+        android:gravity="center">
+
     <bitmap
-            android:gravity="center"
-            android:src="@drawable/renner_logo"
+        android:gravity="fill"
+        android:src="@drawable/renner_logo"
+        android:mipMap="true"
             />
     </item>
 </layer-list>

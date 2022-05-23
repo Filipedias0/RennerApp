@@ -28,10 +28,12 @@ class DetailsActivity : AppCompatActivity() {
         val boolW = data?.getBoolean("boolW")
         val price = data?.getString("price")
         val oldPrice = data?.getString("oldPrice")
+        val discount = data?.getString("discount")
         var imageListDetails = ArrayList<SlideModel>()
         val detailsImageSlider = findViewById<ImageSlider>(R.id.details_image_slider)
 
         val textViewDetails = findViewById<TextView>(R.id.textViewDetailsTitle)
+        val textViewDiscount = findViewById<TextView>(R.id.textViewDiscount)
         val textViewPrice = findViewById<TextView>(R.id.textViewOldPrice)
         val textViewNewPrice = findViewById<TextView>(R.id.textViewNewPrice)
         val colorBox = findViewById<LinearLayout>(R.id.colorBox)
@@ -42,6 +44,7 @@ class DetailsActivity : AppCompatActivity() {
         textViewPrice.text = oldPrice
         textViewNewPrice.text = price
         textViewDetails.text = detailsText
+        textViewDiscount.text = discount
 
         backButton.setOnClickListener {
             finish()
@@ -78,6 +81,7 @@ class DetailsActivity : AppCompatActivity() {
                         colorBox,
                         ColorStateList.valueOf(Color.parseColor("#4495d4"))
                     )
+
 
                 }
 

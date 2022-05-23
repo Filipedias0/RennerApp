@@ -15,7 +15,8 @@
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
         <ImageView
             android:id="@+id/goBack"
@@ -78,137 +79,192 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_editor_absoluteX="-200dp" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-100dp"
         android:background="@drawable/border_radius"
-        android:paddingHorizontal="42dp"
-        android:paddingTop="22dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/details_image_slider"
-        tools:layout_editor_absoluteX="3dp">
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_image_slider">
 
-        <TextView
-            android:id="@+id/textViewDetailsTitle"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/textViewClothesMText"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:paddingHorizontal="42dp">
 
-        <TextView
-            android:id="@+id/textViewOldPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/textViewClothesMText"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewDetailsTitle" />
+            <LinearLayout
+                android:id="@+id/btnOutOfStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/inner_square"
+                android:backgroundTint="@color/black"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textViewNewPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="@string/textViewClothesMText"
-            android:textColor="@color/limeGreen"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/textViewOldPrice"
-            app:layout_constraintTop_toTopOf="@+id/textViewOldPrice" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AVISE-ME, QUERO MUITO!"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textViewColor2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Tamanho"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/colorBoxStroke" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/textViewSizeTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Cor"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/textViewOldPrice"
-            app:layout_constraintTop_toBottomOf="@+id/textViewOldPrice" />
+            <LinearLayout
+                android:id="@+id/btnSearchSimilar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/inner_square"
+                android:backgroundTint="@color/light_grey"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingVertical="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnOutOfStock">
 
 
-        <LinearLayout
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/size_shape"
-            android:orientation="vertical"
-            app:flow_horizontalAlign="center"
-            app:flow_verticalAlign="bottom"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewColor2">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buscar item semelhante"
+                    android:textSize="12sp" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/textViewSize"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_marginTop="5dp"
-                android:text="PP"
-                android:textAlignment="center"
+                android:id="@+id/textViewDetailsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/textViewClothesMText"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSearchSimilar" />
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/textViewOldPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/textViewClothesMText"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDetailsTitle" />
 
-        <LinearLayout
-            android:id="@+id/colorBoxStroke"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="2dp"
-            android:background="@drawable/color_square_shape"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:paddingTop="5dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewSizeTitle">
+            <TextView
+                android:id="@+id/textViewNewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/textViewClothesMText"
+                android:textColor="@color/limeGreen"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textViewOldPrice"
+                app:layout_constraintTop_toTopOf="@+id/textViewOldPrice" />
+
+            <TextView
+                android:id="@+id/textViewColor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tamanho"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/colorBoxStroke" />
+
+            <TextView
+                android:id="@+id/textViewSizeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textViewOldPrice"
+                app:layout_constraintTop_toBottomOf="@+id/textViewOldPrice" />
+
 
             <LinearLayout
-                android:id="@+id/colorBox"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/inner_square"
-                android:orientation="horizontal" />
-        </LinearLayout>
+                android:id="@+id/linearLayout4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/size_shape"
+                android:orientation="vertical"
+                app:flow_horizontalAlign="center"
+                app:flow_verticalAlign="bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewColor2">
 
-        <LinearLayout
-            android:id="@+id/colorBoxStrokeAlt"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="16dp"
-            android:background="@drawable/color_square_shape"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:paddingTop="5dp"
-            app:layout_constraintStart_toEndOf="@+id/colorBoxStroke"
-            app:layout_constraintTop_toTopOf="@+id/colorBoxStroke">
+                <TextView
+                    android:id="@+id/textViewSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="PP"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/colorBoxStroke"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/color_square_shape"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSizeTitle">
+
+                <LinearLayout
+                    android:id="@+id/colorBox"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/inner_square"
+                    android:orientation="horizontal" />
+            </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/colorBoxAlt"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/inner_square"
-                android:backgroundTint="#21283E"
-                android:orientation="horizontal" />
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                android:id="@+id/colorBoxStrokeAlt"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/color_square_shape"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                app:layout_constraintStart_toEndOf="@+id/colorBoxStroke"
+                app:layout_constraintTop_toTopOf="@+id/colorBoxStroke">
+
+                <LinearLayout
+                    android:id="@+id/colorBoxAlt"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/inner_square"
+                    android:backgroundTint="#21283E"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.rennerapp
 
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.ViewCompat
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemChangeListener
@@ -72,22 +74,29 @@ class DetailsActivity : AppCompatActivity() {
                 0 -> {
                     imageListDetails.add(SlideModel(R.drawable.m_clothes_1_1, ScaleTypes.FIT))
                     imageListDetails.add(SlideModel(R.drawable.m_clothes_1_2, ScaleTypes.FIT))
-                    colorBox.setBackgroundColor(Color.parseColor("#4495d4"))
+                    ViewCompat.setBackgroundTintList(
+                        colorBox,
+                        ColorStateList.valueOf(Color.parseColor("#4495d4"))
+                    )
 
-                    //imageListMDetails.add(SlideModel(R.drawable.m_clothes_alt_1_1, ScaleTypes.FIT))
-                    //imageListMDetails.add(SlideModel(R.drawable.m_clothes_alt_1_2, ScaleTypes.FIT))
                 }
 
                 1 -> {
                     imageListDetails.add(SlideModel(R.drawable.m_clothes_2_1, ScaleTypes.FIT))
                     imageListDetails.add(SlideModel(R.drawable.m_clothes_2_2, ScaleTypes.FIT))
-                    colorBox.setBackgroundColor(Color.parseColor("#eedad3"))
+                    ViewCompat.setBackgroundTintList(
+                        colorBox,
+                        ColorStateList.valueOf(Color.parseColor("#eedad3"))
+                    )
                 }
 
                 2 -> {
                     imageListDetails.add(SlideModel(R.drawable.m_clothes_3_1, ScaleTypes.FIT))
                     imageListDetails.add(SlideModel(R.drawable.m_clothes_3_2, ScaleTypes.FIT))
-                    colorBox.setBackgroundColor(Color.parseColor("#e5e2da"))
+                    ViewCompat.setBackgroundTintList(
+                        colorBox,
+                        ColorStateList.valueOf(Color.parseColor("#e5e2da"))
+                    )
                 }
             }
         }

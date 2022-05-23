@@ -1,21 +1,21 @@
 package com.example.rennerapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Toast
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemChangeListener
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
-import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val context = this
         val imageListM = ArrayList<SlideModel>()
 
         imageListM.add(SlideModel(R.drawable.m_clothes_1_1, ScaleTypes.FIT))
@@ -28,33 +28,46 @@ class MainActivity : AppCompatActivity() {
         val textViewClothesMPrice = findViewById<TextView>(R.id.textViewClothesMPrice)
 
         imageSliderM.setImageList(imageListM)
-        imageSliderM.setItemChangeListener(object : ItemClickListener, ItemChangeListener {
+
+
+        imageSliderM.setItemClickListener(object : ItemClickListener {
             override fun onItemSelected(position: Int) {
-                // You can listen here
+                val productDetails = Intent( context , DetailsActivity::class.java)
+                productDetails.putExtra("imageNumberM", position)
+                    productDetails.putExtra(
+                        "detailsText",
+                        "${textViewClothesM.text} ${textViewClothesMDesc.text}"
+                    )
+
+                startActivity(productDetails)
             }
+        })
 
-            override fun onItemChanged(position: Int) {
+        imageSliderM.setItemChangeListener(object : ItemChangeListener {
+                override fun onItemChanged(position: Int) {
 
-                when (position){
-                    0 -> {
-                        textViewClothesM.text = "Blusão"
-                        textViewClothesMDesc.text = "Em Moletom com Capuz e Bolso Canguru"
-                        textViewClothesMPrice.text = "R$ 159,90"
-                    }
+                    when (position) {
+                        0 -> {
+                            textViewClothesM.text = "Blusão"
+                            textViewClothesMDesc.text = "Em Moletom com Capuz e Bolso Canguru"
+                            textViewClothesMPrice.text = "R$ 159,90"
+                        }
 
-                    1 -> {
-                        textViewClothesM.text = "Moletom"
-                        textViewClothesMDesc.text = "Com capuz ajustável e estampa lettering Califórnia rosa"
-                        textViewClothesMPrice.text = "R$ 169,90"
-                    }
+                        1 -> {
+                            textViewClothesM.text = "Moletom"
+                            textViewClothesMDesc.text =
+                                "Com capuz ajustável e estampa lettering Califórnia rosa"
+                            textViewClothesMPrice.text = "R$ 169,90"
+                        }
 
-                    2 -> {
-                        textViewClothesM.text = "Blusão"
-                        textViewClothesMDesc.text = "Com gola com capuz e manga longa com ribana"
-                        textViewClothesMPrice.text = "R$ 149,90"
+                        2 -> {
+                            textViewClothesM.text = "Blusão"
+                            textViewClothesMDesc.text =
+                                "Com gola com capuz e manga longa com ribana"
+                            textViewClothesMPrice.text = "R$ 149,90"
+                        }
                     }
                 }
-            }
         })
 
         val imageListW = ArrayList<SlideModel>()
@@ -67,12 +80,19 @@ class MainActivity : AppCompatActivity() {
         val textViewClothesWDesc = findViewById<TextView>(R.id.textViewClothesWDesc)
         val textViewClothesWPrice = findViewById<TextView>(R.id.textViewClothesWPrice)
 
-        val imageSlider = findViewById<ImageSlider>(R.id.image_slider_w)
-        imageSlider.setImageList(imageListW)
-        imageSlider.setItemChangeListener(object : ItemClickListener, ItemChangeListener {
+        val imageSliderW = findViewById<ImageSlider>(R.id.image_slider_w)
+        imageSliderW.setImageList(imageListW)
+
+        imageSliderW.setItemClickListener(object : ItemClickListener {
             override fun onItemSelected(position: Int) {
-                // You can listen here
+                val productDetails = Intent( context , DetailsActivity::class.java)
+                productDetails.putExtra("imageNumberW", position)
+                productDetails.putExtra("boolW", true)
+                startActivity(productDetails)
             }
+        })
+
+        imageSliderW.setItemChangeListener(object: ItemChangeListener {
 
             override fun onItemChanged(position: Int) {
                 when (position){
@@ -83,7 +103,7 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     1 -> {
-                        textViewClothesW.text = "Blusa managa longa"
+                        textViewClothesW.text = "Blusa manga longa"
                         textViewClothesMDesc.text = "Em Tricô com pontos diferenciados verde"
                         textViewClothesMPrice.text = "R$ 199,90"
                     }

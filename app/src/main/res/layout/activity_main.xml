@@ -15,146 +15,146 @@
         android:layout_height="40dp"
         android:src="@drawable/renner_logo_alt" />
 
-<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="80dp"
-        tools:context=".MainActivity"
-        tools:layout_editor_absoluteX="189dp"
-        tools:layout_editor_absoluteY="0dp"
-        android:layout_marginHorizontal="30dp"
-        >
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <TextView
-            android:id="@+id/textViewHomeTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/textViewHomeTitle"
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <com.denzcoskun.imageslider.ImageSlider
-            android:id="@+id/image_slider_m"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="370dp"
-            android:layout_marginTop="16dp"
-            app:circularflow_defaultRadius="50dp"
-            app:circularflow_radiusInDP="50"
-            app:iss_auto_cycle="false"
-            app:iss_corner_radius="50"
-            app:iss_delay="0"
-            app:iss_period="3000"
-            app:iss_placeholder="@color/white"
-            app:layout_constraintCircleRadius="50dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewHomeTitle" >
-
-        </com.denzcoskun.imageslider.ImageSlider>
-
-        <TextView
-            android:id="@+id/textViewClothesM"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/textViewClothesMText"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/image_slider_m"
-            app:layout_constraintTop_toBottomOf="@+id/image_slider_m" />
+            android:paddingBottom="80dp"
+            tools:context=".MainActivity"
+            tools:layout_editor_absoluteX="189dp"
+            tools:layout_editor_absoluteY="0dp"
+            android:layout_marginHorizontal="30dp"
+            >
 
-        <TextView
-            android:id="@+id/textViewClothesMPrice"
-            android:layout_width="wrap_content"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content"
-            android:text="@string/textViewClothesMPriceText"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textViewClothesM" />
+            <TextView
+                android:id="@+id/textViewHomeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textViewHomeTitle"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textViewClothesMDesc"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="@string/textViewClothesMDescText"
-            app:layout_constraintStart_toStartOf="@+id/textViewClothesM"
-            app:layout_constraintTop_toBottomOf="@+id/textViewClothesM" />
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider_m"
+                android:layout_width="match_parent"
+                android:layout_height="370dp"
+                android:layout_marginTop="16dp"
+                app:circularflow_defaultRadius="50dp"
+                app:circularflow_radiusInDP="50"
+                app:iss_auto_cycle="false"
+                app:iss_corner_radius="50"
+                app:iss_delay="0"
+                app:iss_period="3000"
+                app:iss_placeholder="@color/white"
+                app:layout_constraintCircleRadius="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewHomeTitle" >
 
-        <com.denzcoskun.imageslider.ImageSlider
-            android:id="@+id/image_slider_w"
-            android:layout_width="match_parent"
-            android:layout_height="370dp"
-            android:layout_marginTop="16dp"
-            app:circularflow_defaultRadius="50dp"
-            app:circularflow_radiusInDP="50"
-            app:iss_auto_cycle="false"
-            app:iss_corner_radius="50"
-            app:iss_delay="0"
-            app:iss_period="3000"
-            app:iss_placeholder="@color/white"
-            app:layout_constraintCircleRadius="50dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textViewClothesMDesc"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+            </com.denzcoskun.imageslider.ImageSlider>
 
-        </com.denzcoskun.imageslider.ImageSlider>
+            <TextView
+                android:id="@+id/textViewClothesM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/textViewClothesMText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/image_slider_m"
+                app:layout_constraintTop_toBottomOf="@+id/image_slider_m" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/grey"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewClothesMDesc"
-            android:orientation="horizontal" />
+            <TextView
+                android:id="@+id/textViewClothesMPrice"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="@string/textViewClothesMPriceText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewClothesM" />
 
-        <TextView
-            android:id="@+id/textViewClothesW"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/textViewClothesWText"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/image_slider_w"
-            app:layout_constraintTop_toBottomOf="@+id/image_slider_w" />
+            <TextView
+                android:id="@+id/textViewClothesMDesc"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/textViewClothesMDescText"
+                app:layout_constraintStart_toStartOf="@+id/textViewClothesM"
+                app:layout_constraintTop_toBottomOf="@+id/textViewClothesM" />
 
-        <TextView
-            android:id="@+id/textViewClothesWPrice"
-            android:layout_width="wrap_content"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content"
-            android:text="@string/textViewClothesWPriceText"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textViewClothesW" />
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider_w"
+                android:layout_width="match_parent"
+                android:layout_height="370dp"
+                android:layout_marginTop="16dp"
+                app:circularflow_defaultRadius="50dp"
+                app:circularflow_radiusInDP="50"
+                app:iss_auto_cycle="false"
+                app:iss_corner_radius="50"
+                app:iss_delay="0"
+                app:iss_period="3000"
+                app:iss_placeholder="@color/white"
+                app:layout_constraintCircleRadius="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textViewClothesMDesc"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
-        <TextView
-            android:id="@+id/textViewClothesWDesc"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="@string/textViewClothesWDescText"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="@+id/textViewClothesW"
-            app:layout_constraintTop_toBottomOf="@+id/textViewClothesW" />
+            </com.denzcoskun.imageslider.ImageSlider>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewClothesMDesc"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/textViewClothesW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/textViewClothesWText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/image_slider_w"
+                app:layout_constraintTop_toBottomOf="@+id/image_slider_w" />
+
+            <TextView
+                android:id="@+id/textViewClothesWPrice"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="@string/textViewClothesWPriceText"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewClothesW" />
+
+            <TextView
+                android:id="@+id/textViewClothesWDesc"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/textViewClothesWDescText"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewClothesW"
+                app:layout_constraintTop_toBottomOf="@+id/textViewClothesW" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </LinearLayout>

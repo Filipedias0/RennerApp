@@ -4,13 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/drawable/border_radius.xml" value="0.233" />
+        <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/drawable/bottom_border_radius.xml" value="0.1" />
         <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/drawable/color_square_shape.xml" value="0.157" />
         <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/drawable/ic_renner_logo.xml" value="0.1995" />
         <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/drawable/inner_square.xml" value="0.157" />
         <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/drawable/renner_logo_alt.xml" value="0.1995" />
         <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/drawable/size_shape.xml" value="0.157" />
+        <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/drawable/splash_background.xml" value="0.1" />
         <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/layout/activity_details.xml" value="0.33" />
         <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/opah/Desktop/Projetos/RennerApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>

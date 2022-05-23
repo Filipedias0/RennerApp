@@ -154,8 +154,18 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnSearchSimilar" />
+                app:layout_constraintTop_toBottomOf="@+id/btnSearchSimilar"
+                />
 
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDetailsTitle"
+                android:layout_marginTop="8dp">
             <TextView
                 android:id="@+id/textViewOldPrice"
                 android:layout_width="wrap_content"
@@ -164,8 +174,7 @@
                 android:text="@string/textViewClothesMText"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewDetailsTitle" />
+                />
 
             <TextView
                 android:id="@+id/textViewNewPrice"
@@ -176,8 +185,8 @@
                 android:textColor="@color/limeGreen"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/textViewOldPrice"
-                app:layout_constraintTop_toTopOf="@+id/textViewOldPrice" />
+               />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textViewColor2"
@@ -194,12 +203,11 @@
                 android:id="@+id/textViewSizeTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:text="Cor"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/textViewOldPrice"
-                app:layout_constraintTop_toBottomOf="@+id/textViewOldPrice" />
+                app:layout_constraintStart_toStartOf="@+id/linearLayout7"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
 
 
             <LinearLayout

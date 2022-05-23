@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
 
         imageSliderM.setImageList(imageListM)
 
-
         imageSliderM.setItemClickListener(object : ItemClickListener {
             override fun onItemSelected(position: Int) {
                 val productDetails = Intent( context , DetailsActivity::class.java)

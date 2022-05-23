@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         val textViewClothesM = findViewById<TextView>(R.id.textViewClothesM)
         val textViewClothesMDesc = findViewById<TextView>(R.id.textViewClothesMDesc)
         val textViewClothesMPrice = findViewById<TextView>(R.id.textViewClothesMPrice)
+        val textViewClothesMOldPrice = findViewById<TextView>(R.id.textViewOldPriceM)
 
         imageSliderM.setImageList(imageListM)
 
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                         "detailsText",
                         "${textViewClothesM.text} ${textViewClothesMDesc.text}"
                     )
+                productDetails.putExtra("oldPrice", textViewClothesMOldPrice.text)
                 productDetails.putExtra("price", textViewClothesMPrice.text)
                 startActivity(productDetails)
             }
@@ -78,6 +80,7 @@ class MainActivity : AppCompatActivity() {
 
         val textViewClothesW = findViewById<TextView>(R.id.textViewClothesW)
         val textViewClothesWDesc = findViewById<TextView>(R.id.textViewClothesWDesc)
+        val textViewClothesWOldPrice = findViewById<TextView>(R.id.textViewClothesWOldPrice)
         val textViewClothesWPrice = findViewById<TextView>(R.id.textViewClothesWPrice)
 
         val imageSliderW = findViewById<ImageSlider>(R.id.image_slider_w)
@@ -93,6 +96,7 @@ class MainActivity : AppCompatActivity() {
                     "detailsText",
                     "${textViewClothesM.text} ${textViewClothesMDesc.text}"
                 )
+                productDetails.putExtra("oldPrice", textViewClothesWOldPrice.text)
                 productDetails.putExtra("price", textViewClothesWPrice.text)
                 startActivity(productDetails)
             }
@@ -105,19 +109,23 @@ class MainActivity : AppCompatActivity() {
                     0 -> {
                         textViewClothesW.text = "Blusa em Viscose"
                         textViewClothesWDesc.text = "Com manga longa comfy preto"
+
                         textViewClothesWPrice.text = "R$ 99,90"
+                        textViewClothesWOldPrice.text = "R$120,90"
                     }
 
                     1 -> {
                         textViewClothesW.text = "Blusa manga longa"
                         textViewClothesWDesc.text = "Em Tricô com pontos diferenciados verde"
                         textViewClothesWPrice.text = "R$ 199,90"
+                        textViewClothesWOldPrice.text = "R$220,90"
                     }
 
                     2 -> {
                         textViewClothesW.text = "Blusa alongada em tricô"
                         textViewClothesWDesc.text = "Com golinha alta e fenda bege"
                         textViewClothesWPrice.text = "R$ 99,90"
+                        textViewClothesWOldPrice.text = "R$120,90"
                     }
                 }
             }

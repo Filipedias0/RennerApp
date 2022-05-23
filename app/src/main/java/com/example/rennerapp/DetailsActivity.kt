@@ -25,42 +25,48 @@ class DetailsActivity : AppCompatActivity() {
         val detailsText = data?.getString("detailsText")
         val boolW = data?.getBoolean("boolW")
         val price = data?.getString("price")
+        val oldPrice = data?.getString("oldPrice")
         var imageListDetails = ArrayList<SlideModel>()
         val detailsImageSlider = findViewById<ImageSlider>(R.id.details_image_slider)
 
         val textViewDetails = findViewById<TextView>(R.id.textViewDetailsTitle)
         val textViewPrice = findViewById<TextView>(R.id.textViewOldPrice)
+        val textViewNewPrice = findViewById<TextView>(R.id.textViewNewPrice)
         val colorBox = findViewById<LinearLayout>(R.id.colorBox)
         val colorBoxView = findViewById<LinearLayout>(R.id.colorBoxStroke)
         val colorBoxViewAlt = findViewById<LinearLayout>(R.id.colorBoxStrokeAlt)
         val backButton = findViewById<ImageView>(R.id.goBack)
 
-        textViewPrice.text = price
+        textViewPrice.text = oldPrice
+        textViewNewPrice.text = price
         textViewDetails.text = detailsText
 
         backButton.setOnClickListener {
             finish()
         }
 
-        if(detailsText != "Blusão Em Moletom com Capuz e Bolso Canguru" && boolW == false) {
+        if(detailsText != "Blusão Em Moletom com Capuz e Bolso Canguru" || boolW == true) {
             colorBoxViewAlt.visibility = View.GONE
         }
 
-        colorBoxViewAlt.setOnClickListener {
+        if(boolW == false && detailsText == "Blusão Em Moletom com Capuz e Bolso Canguru"){
+            colorBoxViewAlt.setOnClickListener {
                 val newImageList = ArrayList<SlideModel>()
 
                 newImageList.add(SlideModel(R.drawable.m_clothes_alt_1_1, ScaleTypes.FIT))
                 newImageList.add(SlideModel(R.drawable.m_clothes_alt_1_2, ScaleTypes.FIT))
                 detailsImageSlider.setImageList(newImageList, ScaleTypes.FIT)
+            }
+
+            colorBoxView.setOnClickListener {
+                val newImageList = ArrayList<SlideModel>()
+                newImageList.add(SlideModel(R.drawable.m_clothes_1_1, ScaleTypes.FIT))
+                newImageList.add(SlideModel(R.drawable.m_clothes_1_2, ScaleTypes.FIT))
+
+                detailsImageSlider.setImageList(newImageList, ScaleTypes.FIT)
+            }
         }
 
-        colorBoxView.setOnClickListener {
-                    val newImageList = ArrayList<SlideModel>()
-                    newImageList.add(SlideModel(R.drawable.m_clothes_1_1, ScaleTypes.FIT))
-                    newImageList.add(SlideModel(R.drawable.m_clothes_1_2, ScaleTypes.FIT))
-
-                    detailsImageSlider.setImageList(newImageList, ScaleTypes.FIT)
-        }
         if(boolW == false){
             when (detailsImageNumberM) {
                 0 -> {

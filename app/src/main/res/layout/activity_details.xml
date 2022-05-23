@@ -80,15 +80,17 @@
         app:layout_editor_absoluteX="-200dp" />
 
 
-    <androidx.core.widget.NestedScrollView
+    <ScrollView
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-100dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-36dp"
+        android:layout_marginBottom="-6dp"
         android:background="@drawable/border_radius"
-        android:fillViewport="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_image_slider">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/details_image_slider"
+        tools:layout_editor_absoluteX="3dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -201,7 +203,7 @@
 
 
             <LinearLayout
-                android:id="@+id/linearLayout4"
+                android:id="@+id/linearLayout6"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="2dp"
@@ -223,7 +225,7 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
-            
+
             <LinearLayout
                 android:id="@+id/colorBoxStroke"
                 android:layout_width="40dp"
@@ -265,6 +267,6 @@
                     android:orientation="horizontal" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

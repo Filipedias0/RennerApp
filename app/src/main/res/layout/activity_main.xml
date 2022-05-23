@@ -167,10 +167,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textViewClothesMDesc"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+                app:layout_constraintTop_toBottomOf="@+id/colorBoxStrokeAlt">
 
                 <LinearLayout
-                    android:id="@+id/linearLayoutPromotion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -216,6 +215,37 @@
                 android:orientation="horizontal" />
 
             <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cores que combinam com essa roupa"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <LinearLayout
+                android:id="@+id/colorBoxStrokeAlt"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/color_square_shape"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <LinearLayout
+                    android:id="@+id/colorBoxSuggestedM"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/inner_square"
+                    android:backgroundTint="#e9edeb"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <TextView
                 android:id="@+id/textViewClothesW"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -257,6 +287,47 @@
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/textViewClothesW"
                 app:layout_constraintTop_toBottomOf="@+id/textViewClothesW" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/grey"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewClothesWDesc" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cores que combinam com essa roupa"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/color_square_shape"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                <LinearLayout
+                    android:id="@+id/colorBoxSuggestedW"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/inner_square"
+                    android:backgroundTint="#e9edeb"
+                    android:orientation="horizontal" />
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

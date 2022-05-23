@@ -1,9 +1,13 @@
 package com.example.rennerapp
 
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.view.ViewCompat
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemChangeListener
@@ -29,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         val textViewClothesMOldPrice = findViewById<TextView>(R.id.textViewOldPriceM)
         val textViewDiscountM = findViewById<TextView>(R.id.textViewDiscountM)
         val textViewDiscountW = findViewById<TextView>(R.id.textViewDiscountW)
+        val colorBoxM = findViewById<LinearLayout>(R.id.colorBoxSuggestedM)
+        val colorBoxW = findViewById<LinearLayout>(R.id.colorBoxSuggestedW)
 
         imageSliderM.setImageList(imageListM)
 
@@ -57,6 +63,11 @@ class MainActivity : AppCompatActivity() {
                             textViewClothesMPrice.text = "R$ 133,63"
                             textViewClothesMOldPrice.text = "R$190,90"
                             textViewDiscountM.text = "30%"
+
+                            ViewCompat.setBackgroundTintList(
+                                colorBoxM,
+                                ColorStateList.valueOf(Color.parseColor("#e9edeb"))
+                            )
                         }
 
                         1 -> {
@@ -66,7 +77,10 @@ class MainActivity : AppCompatActivity() {
                             textViewClothesMPrice.text = "R$ 135,98"
                             textViewClothesMOldPrice.text = "R$190,90"
                             textViewDiscountM.text = "20%"
-
+                            ViewCompat.setBackgroundTintList(
+                                colorBoxM,
+                                ColorStateList.valueOf(Color.parseColor("#99948e"))
+                            )
                         }
 
                         2 -> {
@@ -76,6 +90,10 @@ class MainActivity : AppCompatActivity() {
                             textViewClothesMPrice.text = "R$ 120,90"
                             textViewClothesMOldPrice.text = "R$200,90"
                             textViewDiscountM.text = "40%"
+                            ViewCompat.setBackgroundTintList(
+                                colorBoxM,
+                                ColorStateList.valueOf(Color.parseColor("#9c6f51"))
+                            )
                         }
                     }
                 }
@@ -123,6 +141,10 @@ class MainActivity : AppCompatActivity() {
                         textViewClothesWPrice.text = "R$ 84,63"
                         textViewClothesWOldPrice.text = "R$120,90"
                         textViewDiscountW.text = "30%"
+                        ViewCompat.setBackgroundTintList(
+                            colorBoxW,
+                            ColorStateList.valueOf(Color.parseColor("#a79691"))
+                        )
                     }
 
                     1 -> {
@@ -131,6 +153,10 @@ class MainActivity : AppCompatActivity() {
                         textViewClothesWPrice.text = "R$ 132,54"
                         textViewClothesWOldPrice.text = "R$220,90"
                         textViewDiscountW.text = "40%"
+                        ViewCompat.setBackgroundTintList(
+                            colorBoxW,
+                            ColorStateList.valueOf(Color.parseColor("#d0b298"))
+                        )
 
                     }
 
@@ -140,6 +166,10 @@ class MainActivity : AppCompatActivity() {
                         textViewClothesWPrice.text = "R$ 60,45"
                         textViewClothesWOldPrice.text = "R$120,90"
                         textViewDiscountW.text = "50%"
+                        ViewCompat.setBackgroundTintList(
+                            colorBoxW,
+                            ColorStateList.valueOf(Color.parseColor("#ada897"))
+                        )
                     }
                 }
             }

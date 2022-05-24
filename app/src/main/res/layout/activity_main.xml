@@ -72,6 +72,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="16dp"
+                    android:contentDescription="@string/eco_friendly"
                     android:gravity="center"
                     android:src="@drawable/eco_logo">
 
@@ -96,7 +97,7 @@
                         android:id="@+id/textViewDiscountM"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="30%"
+                        android:text="@string/_30"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
@@ -105,7 +106,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="-5dp"
-                        android:text="OFF"
+                        android:text="@string/off"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
@@ -140,7 +141,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:text="R$ 190,90"
+                android:text="@string/r_190_90"
                 android:textColor="@color/black"
                 android:textSize="12sp"
                 android:textStyle="bold"
@@ -191,7 +192,7 @@
                         android:id="@+id/textViewDiscountW"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="30%"
+                        android:text="@string/_30"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
@@ -200,7 +201,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="-5dp"
-                        android:text="OFF"
+                        android:text="@string/off"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         android:textStyle="bold" />
@@ -223,7 +224,7 @@
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cores que combinam com essa roupa"
+                android:text="@string/cores_que_combinam_com_essa_roupa"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -246,7 +247,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@drawable/inner_square"
-                    android:backgroundTint="#a79691"
+                    android:backgroundTint="#e9edeb"
                     android:orientation="horizontal" />
             </LinearLayout>
 
@@ -308,7 +309,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cores que combinam com essa roupa"
+                android:text="@string/cores_que_combinam_com_essa_roupa"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -330,7 +331,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@drawable/inner_square"
-                    android:backgroundTint="#e9edeb"
+                    android:backgroundTint="#a79691"
                     android:orientation="horizontal" />
             </LinearLayout>
 

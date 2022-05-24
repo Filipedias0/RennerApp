@@ -10,4 +10,15 @@
     <string name="textViewClothesWDescText">Em viscose com manga longa comfy preto</string>
     <string name="home">Home</string>
     <string name="logo_renner">Logo Renner</string>
+    <string name="eco_friendly">Eco friendly</string>
+    <string name="_30">30%</string>
+    <string name="r_190_90">R$ 190,90</string>
+    <string name="cores_que_combinam_com_essa_roupa">Cores que combinam com essa roupa</string>
+    <string name="go_back">Go back</string>
+    <string name="logo_alternativa_renner">Logo alternativa Renner</string>
+    <string name="_15">15%</string>
+    <string name="off">OFF</string>
+    <string name="_1_2">1/2</string>
+    <string name="adicionar_sacola">Adicionar à sacola</string>
+    <string name="avise_me_quero_muito">AVISE-ME, QUERO MUITO!</string>
 </resources>

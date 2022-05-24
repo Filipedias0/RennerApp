@@ -19,6 +19,7 @@
         >
 
         <ImageView
+            android:contentDescription="@string/go_back"
             android:id="@+id/goBack"
             android:layout_width="26dp"
             android:layout_height="26dp"
@@ -30,6 +31,7 @@
             app:srcCompat="?attr/actionModeCloseDrawable" />
 
         <ImageView
+            android:contentDescription="@string/logo_alternativa_renner"
             android:id="@+id/rennerLogoDetails"
             android:layout_width="100dp"
             android:layout_height="40dp"
@@ -69,7 +71,7 @@
                 android:id="@+id/textViewDiscount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="15%"
+                android:text="@string/_15"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -78,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-5dp"
-                android:text="OFF"
+                android:text="@string/off"
                 android:textColor="@color/white"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -92,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="-24dp"
         android:layout_marginEnd="24dp"
-        android:text="1/2"
+        android:text="@string/_1_2"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -106,7 +108,7 @@
         android:layout_marginBottom="-8dp"
         android:height="80dp"
         android:backgroundTint="#C40233"
-        android:text="Adicionar à sacola"
+        android:text="@string/adicionar_sacola"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,9 +147,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="AVISE-ME, QUERO MUITO!"
+                    android:text="@string/avise_me_quero_muito"
                     android:textColor="@color/white"
-                    android:textSize="10sp"
+                    android:textSize="11sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -180,15 +182,23 @@
 
             <TextView
                 android:id="@+id/textViewDetailsTitle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:text="@string/textViewClothesMText"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/imageViewHeart"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnSearchSimilar"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/btnSearchSimilar" />
+
+            <ImageView
+                android:id="@+id/imageViewHeart"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_baseline_favorite_border_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewDetailsTitle" />
 
             <LinearLayout
                 android:id="@+id/linearLayout7"

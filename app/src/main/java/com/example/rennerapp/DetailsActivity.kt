@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
@@ -29,6 +30,7 @@ class DetailsActivity : AppCompatActivity() {
         val price = data?.getString("price")
         val oldPrice = data?.getString("oldPrice")
         val discount = data?.getString("discount")
+        var isFavorite = false
         var imageListDetails = ArrayList<SlideModel>()
         val detailsImageSlider = findViewById<ImageSlider>(R.id.details_image_slider)
 
@@ -40,6 +42,18 @@ class DetailsActivity : AppCompatActivity() {
         val colorBoxView = findViewById<LinearLayout>(R.id.colorBoxStroke)
         val colorBoxViewAlt = findViewById<LinearLayout>(R.id.colorBoxStrokeAlt)
         val backButton = findViewById<ImageView>(R.id.goBack)
+        val imageViewHeart = findViewById<ImageView>(R.id.imageViewHeart)
+
+
+        imageViewHeart.setOnClickListener {
+            if(!isFavorite) {
+                it.setBackgroundResource(R.drawable.ic_baseline_favorite_24)
+                isFavorite = true
+            }else{
+                it.setBackgroundResource(R.drawable.ic_baseline_favorite_border_24)
+                isFavorite = false
+            }
+        }
 
         textViewPrice.text = oldPrice
         textViewNewPrice.text = price

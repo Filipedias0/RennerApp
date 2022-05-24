@@ -5,8 +5,10 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
@@ -53,6 +55,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+
+
         imageSliderM.setItemChangeListener(object : ItemChangeListener {
                 override fun onItemChanged(position: Int) {
 
@@ -86,7 +90,7 @@ class MainActivity : AppCompatActivity() {
                         2 -> {
                             textViewClothesM.text = "Blusão"
                             textViewClothesMDesc.text =
-                                "Com gola com capuz e manga longa com ribana"
+                                "Com capuz ajustável liso"
                             textViewClothesMPrice.text = "R$ 120,90"
                             textViewClothesMOldPrice.text = "R$200,90"
                             textViewDiscountM.text = "40%"

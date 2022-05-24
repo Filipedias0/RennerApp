@@ -8,4 +8,6 @@
     <string name="textViewClothesWText">Blusa em Viscose</string>
     <string name="textViewClothesWPriceText">R$ 99,90</string>
     <string name="textViewClothesWDescText">Em viscose com manga longa comfy preto</string>
+    <string name="home">Home</string>
+    <string name="logo_renner">Logo Renner</string>
 </resources>
